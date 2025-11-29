@@ -15,7 +15,7 @@ class Solution(object):
             totals.append(n)
             total=0
 
-            if len(totals)>500:
+            if len(totals)>50:
                 return False
             
         return True
