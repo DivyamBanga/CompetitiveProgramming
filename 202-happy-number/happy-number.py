@@ -15,7 +15,7 @@ class Solution(object):
             totals.append(n)
             total=0
 
-            if len(totals)>9:
+            if len(totals)>8:
                 return False
             
         return True
