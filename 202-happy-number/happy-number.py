@@ -12,10 +12,12 @@ class Solution(object):
             for i in str(n):
                 total+=int(i)**2
             n=total
+            
+            
+
+            if n in totals:
+                return False
             totals.append(n)
             total=0
-
-            if len(totals)>7:
-                return False
             
         return True
