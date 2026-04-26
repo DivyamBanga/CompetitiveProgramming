@@ -6,10 +6,6 @@ class Solution(object):
         :rtype: List[str]
         """
 
-        if list1==["Shogun","Piatti","Tapioca Express","Burger King","KFC"] and list2==["Piatti","The Grill at Torrey Pines","Hungry Hunter Steakhouse","Shogun"]:
-            return ["Piatti"]
-
-
         max_sum=2000
         ans=[]
 
@@ -17,7 +13,10 @@ class Solution(object):
             for j in range(len(list2)):
                 if list1[i]==list2[j]:
                     if i+j<=max_sum:
-                        max_sum=i+j
-                        ans.append(list1[i])
+                        if i + j < max_sum:
+                            max_sum = i + j
+                            ans = [list1[i]]    
+                        elif i + j == max_sum:   
+                            ans.append(list1[i])
 
         return ans
